@@ -8,8 +8,8 @@
     <v-data-table v-for="data in dummyData" :headers="headers" :items="peoples" :items-per-page="5" :search="search"
       :key="data.a" style="text-align: center;">
       <template v-slot:[`item.actions`]="{ item }">
-        <v-icon style="margin-right: 2px; color: orange;" @click="editData(item.id)">bx bx-edit</v-icon>
-        <v-icon style="margin-right: 2px; color: red;" @click="deleteData(item.id)">bx bxs-trash</v-icon>
+        <v-btn style="margin-right: 2px; color: white; background-color: orange;" @click="editData(item.id)">Edit</v-btn>
+        <v-btn style="margin-right: 2px; color: white; background-color: red;" @click="deleteData(item.id)">Delete</v-btn>
       </template>
       <template v-slot:[`item.status`]="{ item }">
         <span v-if="item.status == 'active'">
